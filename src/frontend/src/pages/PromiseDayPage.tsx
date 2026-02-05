@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import EmojiShowerOverlay from '../components/EmojiShowerOverlay';
+import { Button } from '@/components/ui/button';
+import { Heart } from 'lucide-react';
 
 export default function PromiseDayPage() {
   const [triggerBurst, setTriggerBurst] = useState(0);
+  const [showPromise, setShowPromise] = useState(false);
 
   useEffect(() => {
     // Initial burst on mount
@@ -89,6 +92,29 @@ export default function PromiseDayPage() {
             <br />
             Baby 🤍
           </div>
+
+          {/* Reveal button */}
+          <div className="mt-8 text-center">
+            <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowPromise(!showPromise);
+              }}
+              className="bg-pink hover:bg-pink-hover active:bg-pink-active focus-visible:bg-pink-hover text-white px-6 py-3 rounded-full shadow-md transition-all duration-300 hover:shadow-lg"
+            >
+              <Heart className="w-4 h-4 mr-2 inline-block" />
+              because we love each other. Click me.
+            </Button>
+          </div>
+
+          {/* Revealed promise message */}
+          {showPromise && (
+            <div className="mt-6 p-6 bg-gradient-to-br from-peach-light to-pink-50 rounded-[20px] border-2 border-coral/20 animate-in fade-in slide-in-from-top-4 duration-500">
+              <p className="text-gray-800 text-base md:text-[17px] leading-relaxed text-center font-medium">
+                I promised to be with you forever and I will live by the promise forever.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 

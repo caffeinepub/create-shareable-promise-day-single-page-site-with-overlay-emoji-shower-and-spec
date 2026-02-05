@@ -65,6 +65,11 @@ export default {
                     'accent-foreground': 'oklch(var(--sidebar-accent-foreground))',
                     border: 'oklch(var(--sidebar-border))',
                     ring: 'oklch(var(--sidebar-ring))'
+                },
+                pink: {
+                    DEFAULT: 'oklch(var(--pink))',
+                    hover: 'oklch(var(--pink-hover))',
+                    active: 'oklch(var(--pink-active))'
                 }
             },
             fontFamily: {

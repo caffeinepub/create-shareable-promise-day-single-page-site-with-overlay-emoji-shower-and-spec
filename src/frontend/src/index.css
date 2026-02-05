@@ -44,6 +44,11 @@
         --gray-700: 0.45 0.02 265;
         --gray-600: 0.55 0.02 265;
         --gray-500: 0.65 0.02 265;
+        
+        /* Pretty pink palette for button */
+        --pink: 0.68 0.20 350;
+        --pink-hover: 0.60 0.22 348;
+        --pink-active: 0.52 0.24 346;
     }
 
     .dark {
@@ -79,6 +84,11 @@
         --sidebar-accent-foreground: 0.985 0 0;
         --sidebar-border: 1 0 0 / 10%;
         --sidebar-ring: 0.439 0 0;
+        
+        /* Pretty pink palette for button (dark mode) */
+        --pink: 0.72 0.22 352;
+        --pink-hover: 0.65 0.24 350;
+        --pink-active: 0.58 0.26 348;
     }
 
     * {
@@ -136,6 +146,18 @@
 
     .text-gray-500 {
         color: oklch(var(--gray-500));
+    }
+
+    .bg-pink {
+        background-color: oklch(var(--pink));
+    }
+
+    .bg-pink-hover {
+        background-color: oklch(var(--pink-hover));
+    }
+
+    .bg-pink-active {
+        background-color: oklch(var(--pink-active));
     }
 
     .shadow-card {

@@ -1,8 +1,8 @@
 {
   "frontend/src/App.tsx": "Root application component that renders the Promise Day page directly without routing or authentication.",
-  "frontend/src/pages/PromiseDayPage.tsx": "Main Promise Day greeting page with hero emoji, card layout, photos (rings on top, two below), message content, and click-triggered emoji bursts.",
+  "frontend/src/pages/PromiseDayPage.tsx": "Main Promise Day greeting page with hero emoji, card layout, photos, message content, click-triggered emoji bursts, and a pink-styled reveal button with the text \"because we love each other. Click me.\" that displays an additional forever promise message inline with smooth animation.",
   "frontend/src/components/EmojiShowerOverlay.tsx": "Fixed-position overlay component that renders falling emoji animations above all page content with automatic cleanup and continuous gentle rain effect.",
-  "frontend/src/index.css": "Global styles with romantic peach/coral color palette, Poppins font, emoji fall animations, and custom utility classes for shadows and gradients.",
-  "frontend/tailwind.config.js": "Tailwind configuration extended with Poppins font family for the romantic Promise Day theme.",
+  "frontend/src/index.css": "Global styles with romantic peach/coral color palette, Poppins font, emoji fall animations, custom utility classes for shadows and gradients, and new pretty pink color tokens for the reveal button with hover/active states.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Poppins font family for the romantic Promise Day theme and pink color utilities mapped to CSS variables for the button styling.",
   "frontend/index.html": "HTML entry point with updated title and Poppins font preload from Google Fonts."
 }

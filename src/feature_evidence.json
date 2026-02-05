@@ -2,69 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-public-shareable-single-page-website-that-reproduces-the-provided-promise-day-greeting-page-hero-emoji-card-layout-message-text-signature-and-the-three-provided-photo-urls-and-loads-without-requiring-authentication",
-      "featureTitle": "Create a public, shareable single-page website that reproduces the provided Promise Day greeting page (hero emoji, card layout, message text, signature, and the three provided photo URLs) and loads without requiring authentication.",
-      "files": [
-        "frontend/index.html",
-        "frontend/src/App.tsx",
-        "frontend/src/pages/PromiseDayPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-emoji-shower-animation-so-emojis-render-as-an-overlay-on-top-of-the-card-content-photos-and-message-rather-than-appearing-behind-or-below-it-the-overlay-must-not-block-scrolling-or-clicks-on-the-underlying-page-content",
-      "featureTitle": "Update the emoji shower animation so emojis render as an overlay on top of the card content (photos and message), rather than appearing behind or below it; the overlay must not block scrolling or clicks on the underlying page content.",
-      "files": [
-        "frontend/src/components/EmojiShowerOverlay.tsx",
-        "frontend/src/pages/PromiseDayPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-requested-photo-layout-the-rings-photo-is-displayed-first-at-the-top-of-the-card-and-the-remaining-two-photos-are-displayed-below-it-side-by-side-wrapping-on-small-screens",
-      "featureTitle": "Implement the requested photo layout: the rings photo is displayed first at the top of the card, and the remaining two photos are displayed below it side-by-side (wrapping on small screens).",
-      "files": [
-        "frontend/src/pages/PromiseDayPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-apply-a-coherent-romantic-visual-theme-color-palette-typography-scale-spacing-and-card-styling-consistent-across-the-page-without-using-a-blue-purple-dominant-scheme",
-      "featureTitle": "Apply a coherent, romantic visual theme (color palette, typography scale, spacing, and card styling) consistent across the page, without using a blue/purple-dominant scheme.",
+      "featureId": "feature-update-the-additional-promise-reveal-button-at-the-end-of-the-promise-day-greeting-card-to-use-an-aesthetic-pretty-dark-pink-color-styling-including-hover-active-states-instead-of-the-current-coral-styling-while-keeping-the-button-readable-and-consistent-with-the-page-s-romantic-theme",
+      "featureTitle": "Update the additional promise reveal button at the end of the Promise Day greeting card to use an aesthetic pretty/dark pink color styling (including hover/active states) instead of the current coral styling, while keeping the button readable and consistent with the page’s romantic theme.",
       "files": [
         "frontend/src/index.css",
-        "frontend/src/pages/PromiseDayPage.tsx",
-        "frontend/tailwind.config.js"
+        "frontend/src/pages/PromiseDayPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -74,7 +16,25 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-4"
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-change-the-user-facing-label-text-on-the-additional-promise-reveal-button-to-exactly-because-we-love-each-other-click-me",
+      "featureTitle": "Change the user-facing label text on the additional promise reveal button to exactly: \"because we love each other. Click me.\"",
+      "files": [
+        "frontend/src/pages/PromiseDayPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
       ],
       "confidence": "high"
     }

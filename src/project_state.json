@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 7,
   "summary": "Shareable single-page Promise Day greeting website with a card layout, photo arrangement (rings photo on top, two photos below), and an emoji shower animation that overlays the photos and message content.",
   "architectural_notes": [],
   "known_issues": [],
@@ -37,6 +37,30 @@
         "REQ-4"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-an-additional-button-at-the-end-of-the-promise-day-greeting-page-that-when-pressed-opens-displays-a-new-message-with-the-exact-text-i-promised-to-be-with-you-forever-and-i-will-live-by-the-promise-forever",
+      "title": "Add an additional button at the end of the Promise Day greeting page that, when pressed, opens/displays a new message with the exact text: \"I promised to be with you forever and I will live by the promise forever.\"",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-additional-promise-reveal-button-at-the-end-of-the-promise-day-greeting-card-to-use-an-aesthetic-pretty-dark-pink-color-styling-including-hover-active-states-instead-of-the-current-coral-styling-while-keeping-the-button-readable-and-consistent-with-the-page-s-romantic-theme",
+      "title": "Update the additional promise reveal button at the end of the Promise Day greeting card to use an aesthetic pretty/dark pink color styling (including hover/active states) instead of the current coral styling, while keeping the button readable and consistent with the page’s romantic theme.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-user-facing-label-text-on-the-additional-promise-reveal-button-to-exactly-because-we-love-each-other-click-me",
+      "title": "Change the user-facing label text on the additional promise reveal button to exactly: \"because we love each other. Click me.\"",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -55,6 +79,18 @@
     {
       "id": "AR-3",
       "summary": "Ensure photo layout: rings photo displayed first on top; the other two photos displayed underneath in a grid.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add an additional button at the end of the page; when pressed, it opens/displays another message: \"I promised to be with you forever and I will live by the promise forever.\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update the additional message button styling to an aesthetic pretty/dark pink and change its label text to: \"because we love each other. Click me.\"",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,12 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Deliver a public, shareable single-page Promise Day greeting site that matches the provided content and layout, with an emoji shower overlay that appears above the card content.
+**Goal:** Update the additional promise reveal button styling to an aesthetic pink theme and change its label text.
 
 **Planned changes:**
-- Implement a single public page at `/` reproducing the provided Promise Day content (hero 🤝, heading, English message text, signature) and loading the three images from the exact provided URLs.
-- Update the emoji shower so emojis render as a non-interactive overlay above the card/photos/text (correct z-index, `pointer-events: none`) and clean up emoji elements after animations complete.
-- Apply the requested photo layout: rings photo first at the top of the card, with the other two photos below in a responsive 2-column layout that wraps on narrow screens, with consistent rounded styling.
-- Apply a cohesive romantic visual theme (palette, typography, spacing, card styling) that is not blue/purple-dominant and remains readable on mobile/desktop.
+- Change the additional promise reveal button color styling from coral to a pretty/dark pink palette, including hover/focus/active states, while keeping text readable and aligned with the romantic theme.
+- Update the button label text to exactly: "because we love each other. Click me."
 
-**User-visible outcome:** Anyone can open the shared link to view the Promise Day greeting page with the specified message and photo layout, while emoji animations shower over the content without blocking scrolling or clicks.
+**User-visible outcome:** The additional promise reveal button appears in an aesthetic pink style (with matching interaction states) and displays the new label text exactly as specified.
