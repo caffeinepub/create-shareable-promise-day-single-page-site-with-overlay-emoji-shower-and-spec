@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Shareable single-page Promise Day greeting website with a card layout, photo arrangement (rings photo on top, two photos below), and an emoji shower animation that overlays the photos and message content.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-public-shareable-single-page-website-that-reproduces-the-provided-promise-day-greeting-page-hero-emoji-card-layout-message-text-signature-and-the-three-provided-photo-urls-and-loads-without-requiring-authentication",
+      "title": "Create a public, shareable single-page website that reproduces the provided Promise Day greeting page (hero emoji, card layout, message text, signature, and the three provided photo URLs) and loads without requiring authentication.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-emoji-shower-animation-so-emojis-render-as-an-overlay-on-top-of-the-card-content-photos-and-message-rather-than-appearing-behind-or-below-it-the-overlay-must-not-block-scrolling-or-clicks-on-the-underlying-page-content",
+      "title": "Update the emoji shower animation so emojis render as an overlay on top of the card content (photos and message), rather than appearing behind or below it; the overlay must not block scrolling or clicks on the underlying page content.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-requested-photo-layout-the-rings-photo-is-displayed-first-at-the-top-of-the-card-and-the-remaining-two-photos-are-displayed-below-it-side-by-side-wrapping-on-small-screens",
+      "title": "Implement the requested photo layout: the rings photo is displayed first at the top of the card, and the remaining two photos are displayed below it side-by-side (wrapping on small screens).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-romantic-visual-theme-color-palette-typography-scale-spacing-and-card-styling-consistent-across-the-page-without-using-a-blue-purple-dominant-scheme",
+      "title": "Apply a coherent, romantic visual theme (color palette, typography scale, spacing, and card styling) consistent across the page, without using a blue/purple-dominant scheme.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a shareable website version of the Promise Day greeting page suitable to send to boyfriend (host/deploy-ready single page).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Adjust emoji shower so it renders over (on top of) the photos and message content rather than appearing behind/below them.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Ensure photo layout: rings photo displayed first on top; the other two photos displayed underneath in a grid.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Create shareable Promise Day single-page site with overlay emoji shower and specified photo layout",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

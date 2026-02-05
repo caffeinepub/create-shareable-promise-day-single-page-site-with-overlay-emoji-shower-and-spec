@@ -1,0 +1,101 @@
+{
+  "kind": "build_request",
+  "title": "Create shareable Promise Day single-page site with overlay emoji shower and specified photo layout",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a public, shareable single-page website that reproduces the provided Promise Day greeting page (hero emoji, card layout, message text, signature, and the three provided photo URLs) and loads without requiring authentication.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Make this into a website that I can share with my boyfriend."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the app root (/) shows the Promise Day page content without requiring login.",
+        "The page includes the same visible content as the provided HTML: hero 🤝, heading, message paragraphs, and signature text in English as provided.",
+        "The three images load from the exact URLs provided in the user HTML and render on the page."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update the emoji shower animation so emojis render as an overlay on top of the card content (photos and message), rather than appearing behind or below it; the overlay must not block scrolling or clicks on the underlying page content.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "I want the emoji shower to be over the photos and the message, not below it."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Falling/bursting emojis visually pass over the photos and the message text (higher stacking order than the card and its contents).",
+        "Emoji elements do not prevent interaction with the page (e.g., pointer events do not block clicks/scroll).",
+        "Emoji elements are cleaned up after animation completes (no unbounded DOM growth)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the requested photo layout: the rings photo is displayed first at the top of the card, and the remaining two photos are displayed below it side-by-side (wrapping on small screens).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "I want the first photo with the rings to be on top and the last two photos to be below."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The rings image appears above the two other images in the card.",
+        "The two non-rings images appear beneath the rings image in a 2-column grid on typical mobile/desktop widths and wrap appropriately on narrow screens.",
+        "All images maintain a consistent, polished styling (rounded corners and sensible sizing) and remain responsive."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a coherent, romantic visual theme (color palette, typography scale, spacing, and card styling) consistent across the page, without using a blue/purple-dominant scheme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page has a consistent visual system (background, card, headings, body text) that feels intentionally designed.",
+        "Primary colors are not blue/purple-dominant.",
+        "The layout remains readable and visually balanced on mobile and desktop widths."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must use the pre-injected React + TypeScript + Tailwind + shadcn/ui + React Query template.",
+    "Do not edit files under frontend/src/components/ui or any other immutable paths listed in SYSTEM_CONTEXT.",
+    "Backend (Motoko) is single-actor; only add backend code if strictly necessary for the requested functionality."
+  ],
+  "nonGoals": [
+    "Adding user accounts or Internet Identity authentication.",
+    "Adding a CMS/editor for changing the message or images.",
+    "Storing images or message content in the backend.",
+    "Multi-page routing or complex navigation beyond a single shareable page."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

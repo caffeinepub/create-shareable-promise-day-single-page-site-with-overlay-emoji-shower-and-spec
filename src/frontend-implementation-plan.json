@@ -1,0 +1,96 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Promise Day shareable single-page greeting with emoji overlay and photo grid",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a public single-page Promise Day greeting at / that matches the provided content and loads the three provided image URLs without authentication.",
+      "acceptanceCriteria": [
+        "Visiting the app root (/) shows the Promise Day page content without requiring login.",
+        "The page includes the same visible content as the provided HTML: hero 🤝, heading, message paragraphs, and signature text in English as provided.",
+        "The three images load from the exact URLs provided in the user HTML and render on the page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the root app component that renders the Promise Day single-page content directly at / (no auth gating, no multi-page routing). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/PromiseDayPage.tsx",
+          "operation": "create",
+          "description": "Add a PromiseDayPage that reproduces the provided HTML’s visible content (hero 🤝, heading, message paragraphs, signature) and renders the 3 images using the exact user-provided URLs. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure document metadata (title/lang) is appropriate for a shareable Promise Day greeting page and aligns with the single-page experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Ensure the emoji shower animation renders as a non-interactive overlay above the card content and cleans up emoji elements after animation.",
+      "acceptanceCriteria": [
+        "Falling/bursting emojis visually pass over the photos and the message text (higher stacking order than the card and its contents).",
+        "Emoji elements do not prevent interaction with the page (e.g., pointer events do not block clicks/scroll).",
+        "Emoji elements are cleaned up after animation completes (no unbounded DOM growth)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EmojiShowerOverlay.tsx",
+          "operation": "create",
+          "description": "Implement an emoji shower overlay component with fixed/absolute positioning, high z-index, and pointer-events disabled so it sits above the card content while not blocking scroll/click; ensure timed/animation cleanup to avoid unbounded DOM growth. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/PromiseDayPage.tsx",
+          "operation": "modify",
+          "description": "Wire EmojiShowerOverlay into the Promise Day page so the overlay is rendered above the card/photos/message (stacking context) while remaining non-interactive. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply the requested responsive photo layout: rings photo on top, remaining two photos below side-by-side with wrapping on small screens.",
+      "acceptanceCriteria": [
+        "The rings image appears above the two other images in the card.",
+        "The two non-rings images appear beneath the rings image in a 2-column grid on typical mobile/desktop widths and wrap appropriately on narrow screens.",
+        "All images maintain a consistent, polished styling (rounded corners and sensible sizing) and remain responsive."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PromiseDayPage.tsx",
+          "operation": "modify",
+          "description": "Update the photo section to render the rings photo first at the top, followed by a responsive 2-column grid for the remaining two photos (wrapping on narrow widths), with consistent rounded corners and responsive sizing. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive romantic visual theme (non blue/purple-dominant) with consistent typography, spacing, and card styling across the page.",
+      "acceptanceCriteria": [
+        "The page has a consistent visual system (background, card, headings, body text) that feels intentionally designed.",
+        "Primary colors are not blue/purple-dominant.",
+        "The layout remains readable and visually balanced on mobile and desktop widths."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add Tailwind base/components/utilities plus global theme tokens and base styles to establish a romantic, coherent palette (avoid blue/purple-dominant), typography scale, and consistent spacing."
+        },
+        {
+          "path": "frontend/src/pages/PromiseDayPage.tsx",
+          "operation": "modify",
+          "description": "Apply consistent Tailwind styling for background, card, typography, spacing, and responsive layout to match the romantic theme (avoid blue/purple dominance). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (as needed) to support the romantic palette/typography choices used by the page while keeping styling consistent across components."
+        }
+      ]
+    }
+  ]
+}
